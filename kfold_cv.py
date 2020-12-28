@@ -2,7 +2,7 @@ import pandas as pd
 import torch
 
 # define a cross validation function
-def crossvalid(*, train, valid, model, criterion, optimizer, dataset, bs, k_fold=5):
+def kfold_cv(*, train, valid, model, criterion, optimizer, dataset, bs, k_fold=5):
 
     train_score = pd.Series()
     val_score = pd.Series()
